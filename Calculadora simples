@@ -1,0 +1,36 @@
+def calculadora():
+    operacao = input(" Escreva qual operação matermatica deseja fazer: + (adição) , - (subtração) , * (multiplicação) ou / (Divisão) ")
+
+    n1 = int(input("Digite o primeiro numero: "))
+    n2 = int(input("Digite o segundo numero: "))
+
+    if operacao == '+':
+        print('{} + {} = '.format(n1, n2))
+        print(n1 + n2)
+
+    elif operacao == '-':
+        print('{} - {} = '.format(n1, n2))
+        print(n1 - n2)
+
+    elif operacao == '*':
+        print('{} * {} = '.format(n1, n2))
+        print(n1 * n2)
+
+    elif operacao == '/':
+        print('{} / {} = '.format(n1, n2))
+        print(n1 / n2)
+
+    else:
+        print('Essa opção não é valida, digite uma operação matematica')
+    dnv()
+
+def dnv():
+    calcular_dnv = input("Deseja calcular novamente? sim(s) ou nao(n)")
+    if calcular_dnv.upper() == 'S':
+        calculadora()
+    elif calcular_dnv.upper() == 'N':
+        print('Obrigado! Ate mais.')
+    else:
+        dnv()
+
+calculadora()
